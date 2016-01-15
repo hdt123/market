@@ -3,7 +3,9 @@ package com.market.entity;
 
 
 /**
- * MGoodsProperty entity. @author MyEclipse Persistence Tools
+ * 商品属性
+ * @author Administrator
+ *
  */
 
 public class MGoodsProperty  implements java.io.Serializable {
@@ -11,10 +13,14 @@ public class MGoodsProperty  implements java.io.Serializable {
 
     // Fields    
 
-     private Integer propertyId;
-     private MGoods MGoods;
-     private String propertyName;
-     private String propertyValue;
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Integer propertyId;    
+     private MGoods MGoods;       //商品
+     private String propertyName;   //属性键
+     private String propertyValue;  //属性值
 
 
     // Constructors

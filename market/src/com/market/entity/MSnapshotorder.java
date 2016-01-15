@@ -3,13 +3,19 @@ package com.market.entity;
 
 
 /**
- * MSnapshotorder entity. @author MyEclipse Persistence Tools
+ * …Ã∆∑øÏ’’
+ * @author Administrator
+ *
  */
 
 public class MSnapshotorder  implements java.io.Serializable {
 
 
-    // Fields    
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	// Fields    
 
      private Integer snapshotId;
      private MGoods MGoods;

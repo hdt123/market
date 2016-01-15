@@ -3,13 +3,18 @@ package com.market.entity;
 
 
 /**
- * MShopcar entity. @author MyEclipse Persistence Tools
+ * ¹ºÎï³µ
+ * @author Administrator
+ *
  */
-
 public class MShopcar  implements java.io.Serializable {
 
 
-    // Fields    
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	// Fields    
 
      private Integer shopcarId;
      private MGoods MGoods;

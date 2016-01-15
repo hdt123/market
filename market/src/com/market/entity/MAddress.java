@@ -5,7 +5,9 @@ import java.util.Set;
 
 
 /**
- * MAddress entity. @author MyEclipse Persistence Tools
+ * 地址实体类
+ * @author 胡铎腾
+ *
  */
 
 public class MAddress  implements java.io.Serializable {
@@ -13,18 +15,22 @@ public class MAddress  implements java.io.Serializable {
 
     // Fields    
 
-     private Integer addressId;
-     private MProvince MProvinceByAreaId;
-     private MProvince MProvinceByProvinceId;
-     private MProvince MProvinceByCityId;
-     private MMember MMember;
-     private MProvince MProvinceByCountryId;
-     private String addressDetail;
-     private Integer state;
-     private String phoneNum;
-     private String contactName;
-     private String postCode;
-     private Set MOrders = new HashSet(0);
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Integer addressId;                    
+     private MProvince MProvinceByAreaId;    //省Id
+     private MProvince MProvinceByProvinceId; //市Id
+     private MProvince MProvinceByCityId;     //区Id
+     private MMember MMember;                //所属会员    
+     private MProvince MProvinceByCountryId;   //镇级Id
+     private String addressDetail;             //地址详情
+     private Integer state;                  //地址状态，排序，为0时是默认地址
+     private String phoneNum;        
+     private String contactName;              //联系人
+     private String postCode;                 //邮编
+     private Set<MOrder> MOrders = new HashSet<MOrder>(0);   //属于该地址的订单集合
 
 
     // Constructors
@@ -45,7 +51,7 @@ public class MAddress  implements java.io.Serializable {
     }
     
     /** full constructor */
-    public MAddress(Integer addressId, MProvince MProvinceByAreaId, MProvince MProvinceByProvinceId, MProvince MProvinceByCityId, MMember MMember, MProvince MProvinceByCountryId, String addressDetail, Integer state, String phoneNum, String contactName, String postCode, Set MOrders) {
+    public MAddress(Integer addressId, MProvince MProvinceByAreaId, MProvince MProvinceByProvinceId, MProvince MProvinceByCityId, MMember MMember, MProvince MProvinceByCountryId, String addressDetail, Integer state, String phoneNum, String contactName, String postCode, Set<MOrder> MOrders) {
         this.addressId = addressId;
         this.MProvinceByAreaId = MProvinceByAreaId;
         this.MProvinceByProvinceId = MProvinceByProvinceId;
@@ -151,11 +157,11 @@ public class MAddress  implements java.io.Serializable {
         this.postCode = postCode;
     }
 
-    public Set getMOrders() {
+    public Set<MOrder> getMOrders() {
         return this.MOrders;
     }
     
-    public void setMOrders(Set MOrders) {
+    public void setMOrders(Set<MOrder> MOrders) {
         this.MOrders = MOrders;
     }
    

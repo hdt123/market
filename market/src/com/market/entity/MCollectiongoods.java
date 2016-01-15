@@ -3,7 +3,9 @@ package com.market.entity;
 
 
 /**
- * MCollectiongoods entity. @author MyEclipse Persistence Tools
+ * 收藏商品实体类
+ * @author 胡铎腾
+ *
  */
 
 public class MCollectiongoods  implements java.io.Serializable {
@@ -11,11 +13,15 @@ public class MCollectiongoods  implements java.io.Serializable {
 
     // Fields    
 
-     private Integer collectionGoodsId;
-     private MGoods MGoods;
-     private MMember MMember;
-     private String collectDate;
-     private String collectionGoodsDesc;
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Integer collectionGoodsId;      
+     private MGoods MGoods;             //收藏的商品
+     private MMember MMember;           //收藏会员
+     private String collectDate;        //收藏日期
+     private String collectionGoodsDesc;      //收藏备注
 
 
     // Constructors

@@ -5,23 +5,28 @@ import java.util.Set;
 
 
 /**
- * MOrder entity. @author MyEclipse Persistence Tools
+ * 订单
+ * @author Administrator
+ *
  */
-
 public class MOrder  implements java.io.Serializable {
 
 
     // Fields    
 
-     private Integer orderId;
-     private MMember MMember;
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Integer orderId;
+     private MMember MMember;     //该订单的所属会员
      private MAddress MAddress;
      private String odreNum;
      private String createTime;
      private Float orderPrice;
      private Integer orderStatus;
      private String orderRemark;
-     private Set MSnapshotorders = new HashSet(0);
+     private Set<MSnapshotorder> MSnapshotorders = new HashSet<MSnapshotorder>(0);   //该订单下的商品快照
 
 
     // Constructors
@@ -40,100 +45,79 @@ public class MOrder  implements java.io.Serializable {
         this.orderPrice = orderPrice;
         this.orderStatus = orderStatus;
     }
+
+	public Integer getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(Integer orderId) {
+		this.orderId = orderId;
+	}
+
+	public MMember getMMember() {
+		return MMember;
+	}
+
+	public void setMMember(MMember mMember) {
+		MMember = mMember;
+	}
+
+	public MAddress getMAddress() {
+		return MAddress;
+	}
+
+	public void setMAddress(MAddress mAddress) {
+		MAddress = mAddress;
+	}
+
+	public String getOdreNum() {
+		return odreNum;
+	}
+
+	public void setOdreNum(String odreNum) {
+		this.odreNum = odreNum;
+	}
+
+	public String getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(String createTime) {
+		this.createTime = createTime;
+	}
+
+	public Float getOrderPrice() {
+		return orderPrice;
+	}
+
+	public void setOrderPrice(Float orderPrice) {
+		this.orderPrice = orderPrice;
+	}
+
+	public Integer getOrderStatus() {
+		return orderStatus;
+	}
+
+	public void setOrderStatus(Integer orderStatus) {
+		this.orderStatus = orderStatus;
+	}
+
+	public String getOrderRemark() {
+		return orderRemark;
+	}
+
+	public void setOrderRemark(String orderRemark) {
+		this.orderRemark = orderRemark;
+	}
+
+	public Set<MSnapshotorder> getMSnapshotorders() {
+		return MSnapshotorders;
+	}
+
+	public void setMSnapshotorders(Set<MSnapshotorder> mSnapshotorders) {
+		MSnapshotorders = mSnapshotorders;
+	}
     
-    /** full constructor */
-    public MOrder(Integer orderId, MMember MMember, MAddress MAddress, String odreNum, String createTime, Float orderPrice, Integer orderStatus, String orderRemark, Set MSnapshotorders) {
-        this.orderId = orderId;
-        this.MMember = MMember;
-        this.MAddress = MAddress;
-        this.odreNum = odreNum;
-        this.createTime = createTime;
-        this.orderPrice = orderPrice;
-        this.orderStatus = orderStatus;
-        this.orderRemark = orderRemark;
-        this.MSnapshotorders = MSnapshotorders;
-    }
-
-   
-    // Property accessors
-
-    public Integer getOrderId() {
-        return this.orderId;
-    }
-    
-    public void setOrderId(Integer orderId) {
-        this.orderId = orderId;
-    }
-
-    public MMember getMMember() {
-        return this.MMember;
-    }
-    
-    public void setMMember(MMember MMember) {
-        this.MMember = MMember;
-    }
-
-    public MAddress getMAddress() {
-        return this.MAddress;
-    }
-    
-    public void setMAddress(MAddress MAddress) {
-        this.MAddress = MAddress;
-    }
-
-    public String getOdreNum() {
-        return this.odreNum;
-    }
-    
-    public void setOdreNum(String odreNum) {
-        this.odreNum = odreNum;
-    }
-
-    public String getCreateTime() {
-        return this.createTime;
-    }
-    
-    public void setCreateTime(String createTime) {
-        this.createTime = createTime;
-    }
-
-    public Float getOrderPrice() {
-        return this.orderPrice;
-    }
-    
-    public void setOrderPrice(Float orderPrice) {
-        this.orderPrice = orderPrice;
-    }
-
-    public Integer getOrderStatus() {
-        return this.orderStatus;
-    }
-    
-    public void setOrderStatus(Integer orderStatus) {
-        this.orderStatus = orderStatus;
-    }
-
-    public String getOrderRemark() {
-        return this.orderRemark;
-    }
-    
-    public void setOrderRemark(String orderRemark) {
-        this.orderRemark = orderRemark;
-    }
-
-    public Set getMSnapshotorders() {
-        return this.MSnapshotorders;
-    }
-    
-    public void setMSnapshotorders(Set MSnapshotorders) {
-        this.MSnapshotorders = MSnapshotorders;
-    }
-   
-
-
-
-
-
 
 
 

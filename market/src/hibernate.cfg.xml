@@ -6,7 +6,7 @@
 <hibernate-configuration>
 
 	<session-factory>
-		<property name="myeclipse.connection.profile">
+<!-- 		<property name="myeclipse.connection.profile">
 			com.mysql.jdbc.Driver
 		</property>
 		<property name="connection.url">
@@ -17,6 +17,9 @@
 		<property name="connection.driver_class">
 			com.mysql.jdbc.Driver
 		</property>
+		<property name="dialect">
+			org.hibernate.dialect.MySQLDialect
+		</property> -->
 		<property name="dialect">
 			org.hibernate.dialect.MySQLDialect
 		</property>
@@ -37,7 +40,7 @@
 		<mapping resource="com/market/entity/MSnapshotorder.hbm.xml" />
 		<mapping resource="com/market/entity/MProvince.hbm.xml" />
 		<mapping resource="com/market/entity/MFormatGoods.hbm.xml" />
-
+		<mapping resource="com/market/entity/MGoodsType.hbm.xml"/>
 
 	</session-factory>
 

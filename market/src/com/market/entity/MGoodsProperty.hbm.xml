@@ -8,7 +8,7 @@
     <class name="com.market.entity.MGoodsProperty" table="m_goods_property" catalog="market">
         <id name="propertyId" type="java.lang.Integer">
             <column name="propertyId" />
-            <generator class="assigned" />
+            <generator class="native" />
         </id>
         <many-to-one name="MGoods" class="com.market.entity.MGoods" fetch="select">
             <column name="goodsId" not-null="true" />

@@ -8,7 +8,7 @@
     <class name="com.market.entity.MCollectionstore" table="m_collectionstore" catalog="market">
         <id name="collectionStoreId" type="java.lang.Integer">
             <column name="collectionStoreId" />
-            <generator class="assigned" />
+           <generator class="native" />
         </id>
         <many-to-one name="MStore" class="com.market.entity.MStore" fetch="select">
             <column name="storeId" not-null="true" />

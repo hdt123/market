@@ -8,7 +8,7 @@
     <class name="com.market.entity.MImage" table="m_image" catalog="market">
         <id name="imageId" type="java.lang.Integer">
             <column name="imageId" />
-            <generator class="assigned" />
+            <generator class="native" />
         </id>
         <many-to-one name="MGoods" class="com.market.entity.MGoods" fetch="select">
             <column name="goodsId" />

@@ -3,7 +3,9 @@ package com.market.entity;
 
 
 /**
- * MImage entity. @author MyEclipse Persistence Tools
+ * ’’∆¨ µÃÂ¿‡
+ * @author Administrator
+ *
  */
 
 public class MImage  implements java.io.Serializable {
@@ -11,7 +13,11 @@ public class MImage  implements java.io.Serializable {
 
     // Fields    
 
-     private Integer imageId;
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Integer imageId;
      private MGoods MGoods;
      private String imageSrc;
      private Integer storeId;

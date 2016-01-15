@@ -8,7 +8,7 @@
     <class name="com.market.entity.MStore" table="m_store" catalog="market">
         <id name="storeId" type="java.lang.Integer">
             <column name="storeId" />
-            <generator class="assigned" />
+           <generator class="native" />
         </id>
         <set name="MCollectionstores" inverse="true">
             <key>

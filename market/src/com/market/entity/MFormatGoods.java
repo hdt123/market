@@ -5,7 +5,9 @@ import java.util.Set;
 
 
 /**
- * MFormatGoods entity. @author MyEclipse Persistence Tools
+ * 商品规格父级实体类
+ * @author 胡铎腾
+ *
  */
 
 public class MFormatGoods  implements java.io.Serializable {
@@ -13,10 +15,14 @@ public class MFormatGoods  implements java.io.Serializable {
 
     // Fields    
 
-     private Integer id;
-     private MGoods MGoods;
-     private String formatName;
-     private Set MGoodsformats = new HashSet(0);
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Integer id;
+     private MGoods MGoods;               //规格对应商品
+     private String formatName;          //规格父级名称
+     private Set<MGoodsformat> MGoodsformats = new HashSet<MGoodsformat>(0);    //该父级属性所对应的子类属性集合，如：父级属性是颜色，则子类可以是红色，绿色等
 
 
     // Constructors
@@ -31,56 +37,44 @@ public class MFormatGoods  implements java.io.Serializable {
         this.MGoods = MGoods;
         this.formatName = formatName;
     }
-    
-    /** full constructor */
-    public MFormatGoods(Integer id, MGoods MGoods, String formatName, Set MGoodsformats) {
-        this.id = id;
-        this.MGoods = MGoods;
-        this.formatName = formatName;
-        this.MGoodsformats = MGoodsformats;
-    }
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public MGoods getMGoods() {
+		return MGoods;
+	}
+
+	public void setMGoods(MGoods mGoods) {
+		MGoods = mGoods;
+	}
+
+	public String getFormatName() {
+		return formatName;
+	}
+
+	public void setFormatName(String formatName) {
+		this.formatName = formatName;
+	}
+
+	public Set<MGoodsformat> getMGoodsformats() {
+		return MGoodsformats;
+	}
+
+	public void setMGoodsformats(Set<MGoodsformat> mGoodsformats) {
+		MGoodsformats = mGoodsformats;
+	}
+    
+  
    
     // Property accessors
 
-    public Integer getId() {
-        return this.id;
-    }
-    
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public MGoods getMGoods() {
-        return this.MGoods;
-    }
-    
-    public void setMGoods(MGoods MGoods) {
-        this.MGoods = MGoods;
-    }
-
-    public String getFormatName() {
-        return this.formatName;
-    }
-    
-    public void setFormatName(String formatName) {
-        this.formatName = formatName;
-    }
-
-    public Set getMGoodsformats() {
-        return this.MGoodsformats;
-    }
-    
-    public void setMGoodsformats(Set MGoodsformats) {
-        this.MGoodsformats = MGoodsformats;
-    }
-   
-
-
-
-
-
-
+  
 
 
 }

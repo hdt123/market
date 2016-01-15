@@ -3,7 +3,9 @@ package com.market.entity;
 
 
 /**
- * MLog entity. @author MyEclipse Persistence Tools
+ * »’÷æ¿‡
+ * @author Administrator
+ *
  */
 
 public class MLog  implements java.io.Serializable {
@@ -11,7 +13,11 @@ public class MLog  implements java.io.Serializable {
 
     // Fields    
 
-     private Integer logId;
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Integer logId;
      private MManager MManager;
      private String logOperate;
      private String operateDate;

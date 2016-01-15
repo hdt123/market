@@ -3,13 +3,19 @@ package com.market.entity;
 
 
 /**
- * MRejected entity. @author MyEclipse Persistence Tools
+ * ÍË»õ»»»õµ¥
+ * @author Administrator
+ *
  */
 
 public class MRejected  implements java.io.Serializable {
 
 
-    // Fields    
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	// Fields    
 
      private Integer rejectedId;
      private MGoods MGoods;

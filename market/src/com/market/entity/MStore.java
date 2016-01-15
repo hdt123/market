@@ -11,10 +11,14 @@ import java.util.Set;
 public class MStore  implements java.io.Serializable {
 
 
-    // Fields    
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	// Fields    
 
      private Integer storeId;
-     private Set MCollectionstores = new HashSet(0);
+     private Set<MCollectiongoods> MCollectionstores = new HashSet<MCollectiongoods>(0);
 
 
     // Constructors
@@ -27,33 +31,23 @@ public class MStore  implements java.io.Serializable {
     public MStore(Integer storeId) {
         this.storeId = storeId;
     }
-    
-    /** full constructor */
-    public MStore(Integer storeId, Set MCollectionstores) {
-        this.storeId = storeId;
-        this.MCollectionstores = MCollectionstores;
-    }
 
-   
-    // Property accessors
+	public Integer getStoreId() {
+		return storeId;
+	}
 
-    public Integer getStoreId() {
-        return this.storeId;
-    }
-    
-    public void setStoreId(Integer storeId) {
-        this.storeId = storeId;
-    }
+	public void setStoreId(Integer storeId) {
+		this.storeId = storeId;
+	}
 
-    public Set getMCollectionstores() {
-        return this.MCollectionstores;
-    }
-    
-    public void setMCollectionstores(Set MCollectionstores) {
-        this.MCollectionstores = MCollectionstores;
-    }
-   
+	public Set<MCollectiongoods> getMCollectionstores() {
+		return MCollectionstores;
+	}
 
+	public void setMCollectionstores(Set<MCollectiongoods> mCollectionstores) {
+		MCollectionstores = mCollectionstores;
+	}
+  
 
 
 

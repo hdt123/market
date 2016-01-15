@@ -3,7 +3,9 @@ package com.market.entity;
 
 
 /**
- * MCollectionstore entity. @author MyEclipse Persistence Tools
+ *  ’≤ÿ√≈µÍ
+ * @author ∫˙ÓÏÃ⁄
+ *
  */
 
 public class MCollectionstore  implements java.io.Serializable {
@@ -11,7 +13,11 @@ public class MCollectionstore  implements java.io.Serializable {
 
     // Fields    
 
-     private Integer collectionStoreId;
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Integer collectionStoreId;
      private MStore MStore;
      private MMember MMember;
      private String collectDate;

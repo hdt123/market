@@ -8,7 +8,7 @@
     <class name="com.market.entity.MManager" table="m_manager" catalog="market">
         <id name="managerId" type="java.lang.Integer">
             <column name="managerId" />
-            <generator class="assigned" />
+            <generator class="native" />
         </id>
         <property name="managerName" type="java.lang.String">
             <column name="managerName" length="16" not-null="true" />
