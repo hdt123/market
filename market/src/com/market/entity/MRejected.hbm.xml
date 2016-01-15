@@ -8,7 +8,7 @@
     <class name="com.market.entity.MRejected" table="m_rejected" catalog="market">
         <id name="rejectedId" type="java.lang.Integer">
             <column name="rejectedId" />
-            <generator class="identity" />
+            <generator class="assigned" />
         </id>
         <many-to-one name="MGoods" class="com.market.entity.MGoods" fetch="select">
             <column name="goodsId" not-null="true" />

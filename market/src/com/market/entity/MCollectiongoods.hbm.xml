@@ -7,8 +7,8 @@
 <hibernate-mapping>
     <class name="com.market.entity.MCollectiongoods" table="m_collectiongoods" catalog="market">
         <id name="collectionGoodsId" type="java.lang.Integer">
-            <column name="collectionGoods" />
-            <generator class="identity" />
+            <column name="collectionGoodsId" />
+            <generator class="assigned" />
         </id>
         <many-to-one name="MGoods" class="com.market.entity.MGoods" fetch="select">
             <column name="goodsId" not-null="true" />

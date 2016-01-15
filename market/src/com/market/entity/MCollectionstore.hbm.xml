@@ -6,9 +6,9 @@
 -->
 <hibernate-mapping>
     <class name="com.market.entity.MCollectionstore" table="m_collectionstore" catalog="market">
-        <id name="collectionGoods" type="java.lang.Integer">
-            <column name="collectionGoods" />
-            <generator class="identity" />
+        <id name="collectionStoreId" type="java.lang.Integer">
+            <column name="collectionStoreId" />
+            <generator class="assigned" />
         </id>
         <many-to-one name="MStore" class="com.market.entity.MStore" fetch="select">
             <column name="storeId" not-null="true" />
@@ -19,8 +19,8 @@
         <property name="collectDate" type="java.lang.String">
             <column name="collectDate" length="32" not-null="true" />
         </property>
-        <property name="collectionGoodsDesc" type="java.lang.String">
-            <column name="collectionGoodsDesc" length="64" />
+        <property name="collectionStoreDesc" type="java.lang.String">
+            <column name="collectionStoreDesc" length="64" />
         </property>
     </class>
 </hibernate-mapping>

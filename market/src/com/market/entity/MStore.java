@@ -3,44 +3,62 @@ package com.market.entity;
 import java.util.HashSet;
 import java.util.Set;
 
+
 /**
  * MStore entity. @author MyEclipse Persistence Tools
  */
 
-public class MStore implements java.io.Serializable {
+public class MStore  implements java.io.Serializable {
 
-	// Fields
 
-	private Integer storeId;
-	private Set MCollectionstores = new HashSet(0);
+    // Fields    
 
-	// Constructors
+     private Integer storeId;
+     private Set MCollectionstores = new HashSet(0);
 
-	/** default constructor */
-	public MStore() {
-	}
 
-	/** full constructor */
-	public MStore(Set MCollectionstores) {
-		this.MCollectionstores = MCollectionstores;
-	}
+    // Constructors
 
-	// Property accessors
+    /** default constructor */
+    public MStore() {
+    }
 
-	public Integer getStoreId() {
-		return this.storeId;
-	}
+	/** minimal constructor */
+    public MStore(Integer storeId) {
+        this.storeId = storeId;
+    }
+    
+    /** full constructor */
+    public MStore(Integer storeId, Set MCollectionstores) {
+        this.storeId = storeId;
+        this.MCollectionstores = MCollectionstores;
+    }
 
-	public void setStoreId(Integer storeId) {
-		this.storeId = storeId;
-	}
+   
+    // Property accessors
 
-	public Set getMCollectionstores() {
-		return this.MCollectionstores;
-	}
+    public Integer getStoreId() {
+        return this.storeId;
+    }
+    
+    public void setStoreId(Integer storeId) {
+        this.storeId = storeId;
+    }
 
-	public void setMCollectionstores(Set MCollectionstores) {
-		this.MCollectionstores = MCollectionstores;
-	}
+    public Set getMCollectionstores() {
+        return this.MCollectionstores;
+    }
+    
+    public void setMCollectionstores(Set MCollectionstores) {
+        this.MCollectionstores = MCollectionstores;
+    }
+   
+
+
+
+
+
+
+
 
 }

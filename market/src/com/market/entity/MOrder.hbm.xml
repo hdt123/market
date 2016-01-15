@@ -8,7 +8,7 @@
     <class name="com.market.entity.MOrder" table="m_order" catalog="market">
         <id name="orderId" type="java.lang.Integer">
             <column name="orderId" />
-            <generator class="identity" />
+            <generator class="assigned" />
         </id>
         <many-to-one name="MMember" class="com.market.entity.MMember" fetch="select">
             <column name="memberId" not-null="true" />

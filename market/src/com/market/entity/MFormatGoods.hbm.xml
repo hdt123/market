@@ -8,16 +8,19 @@
     <class name="com.market.entity.MFormatGoods" table="m_format_goods" catalog="market">
         <id name="id" type="java.lang.Integer">
             <column name="id" />
-            <generator class="identity" />
+            <generator class="assigned" />
         </id>
         <many-to-one name="MGoods" class="com.market.entity.MGoods" fetch="select">
             <column name="goodsId" not-null="true" />
         </many-to-one>
-        <many-to-one name="MGoodsformat" class="com.market.entity.MGoodsformat" fetch="select">
-            <column name="formatId" not-null="true" />
-        </many-to-one>
         <property name="formatName" type="java.lang.String">
             <column name="formatName" length="64" not-null="true" />
         </property>
+        <set name="MGoodsformats" inverse="true">
+            <key>
+                <column name="parentFormatId" not-null="true" />
+            </key>
+            <one-to-many class="com.market.entity.MGoodsformat" />
+        </set>
     </class>
 </hibernate-mapping>

@@ -8,7 +8,7 @@
     <class name="com.market.entity.MSnapshotorder" table="m_snapshotorder" catalog="market">
         <id name="snapshotId" type="java.lang.Integer">
             <column name="snapshotId" />
-            <generator class="identity" />
+            <generator class="assigned" />
         </id>
         <many-to-one name="MGoods" class="com.market.entity.MGoods" fetch="select">
             <column name="goodsId" not-null="true" />
@@ -18,9 +18,6 @@
         </many-to-one>
         <many-to-one name="MGoodsformat" class="com.market.entity.MGoodsformat" fetch="select">
             <column name="formatId" />
-        </many-to-one>
-        <many-to-one name="MGoodsproperty" class="com.market.entity.MGoodsproperty" fetch="select">
-            <column name="propertyId" />
         </many-to-one>
         <many-to-one name="MOrder" class="com.market.entity.MOrder" fetch="select">
             <column name="orderId" not-null="true" />

@@ -3,81 +3,105 @@ package com.market.entity;
 import java.util.HashSet;
 import java.util.Set;
 
+
 /**
  * MGoodsformat entity. @author MyEclipse Persistence Tools
  */
 
-public class MGoodsformat implements java.io.Serializable {
+public class MGoodsformat  implements java.io.Serializable {
 
-	// Fields
 
-	private Integer formatId;
-	private String formatName;
-	private Float goodsPrice;
-	private Set<MSnapshotorder> MSnapshotorders = new HashSet(0);
-	private Set MFormatGoodses = new HashSet(0);
+    // Fields    
 
-	// Constructors
+     private Integer formatId;
+     private MFormatGoods MFormatGoods;
+     private String formatName;
+     private Float goodsPrice;
+     private Set MShopcars = new HashSet(0);
+     private Set MSnapshotorders = new HashSet(0);
 
-	/** default constructor */
-	public MGoodsformat() {
-	}
+
+    // Constructors
+
+    /** default constructor */
+    public MGoodsformat() {
+    }
 
 	/** minimal constructor */
-	public MGoodsformat(String formatName, Float goodsPrice) {
-		this.formatName = formatName;
-		this.goodsPrice = goodsPrice;
-	}
+    public MGoodsformat(Integer formatId, MFormatGoods MFormatGoods, String formatName, Float goodsPrice) {
+        this.formatId = formatId;
+        this.MFormatGoods = MFormatGoods;
+        this.formatName = formatName;
+        this.goodsPrice = goodsPrice;
+    }
+    
+    /** full constructor */
+    public MGoodsformat(Integer formatId, MFormatGoods MFormatGoods, String formatName, Float goodsPrice, Set MShopcars, Set MSnapshotorders) {
+        this.formatId = formatId;
+        this.MFormatGoods = MFormatGoods;
+        this.formatName = formatName;
+        this.goodsPrice = goodsPrice;
+        this.MShopcars = MShopcars;
+        this.MSnapshotorders = MSnapshotorders;
+    }
 
-	/** full constructor */
-	public MGoodsformat(String formatName, Float goodsPrice,
-			Set MSnapshotorders, Set MFormatGoodses) {
-		this.formatName = formatName;
-		this.goodsPrice = goodsPrice;
-		this.MSnapshotorders = MSnapshotorders;
-		this.MFormatGoodses = MFormatGoodses;
-	}
+   
+    // Property accessors
 
-	// Property accessors
+    public Integer getFormatId() {
+        return this.formatId;
+    }
+    
+    public void setFormatId(Integer formatId) {
+        this.formatId = formatId;
+    }
 
-	public Integer getFormatId() {
-		return this.formatId;
-	}
+    public MFormatGoods getMFormatGoods() {
+        return this.MFormatGoods;
+    }
+    
+    public void setMFormatGoods(MFormatGoods MFormatGoods) {
+        this.MFormatGoods = MFormatGoods;
+    }
 
-	public void setFormatId(Integer formatId) {
-		this.formatId = formatId;
-	}
+    public String getFormatName() {
+        return this.formatName;
+    }
+    
+    public void setFormatName(String formatName) {
+        this.formatName = formatName;
+    }
 
-	public String getFormatName() {
-		return this.formatName;
-	}
+    public Float getGoodsPrice() {
+        return this.goodsPrice;
+    }
+    
+    public void setGoodsPrice(Float goodsPrice) {
+        this.goodsPrice = goodsPrice;
+    }
 
-	public void setFormatName(String formatName) {
-		this.formatName = formatName;
-	}
+    public Set getMShopcars() {
+        return this.MShopcars;
+    }
+    
+    public void setMShopcars(Set MShopcars) {
+        this.MShopcars = MShopcars;
+    }
 
-	public Float getGoodsPrice() {
-		return this.goodsPrice;
-	}
+    public Set getMSnapshotorders() {
+        return this.MSnapshotorders;
+    }
+    
+    public void setMSnapshotorders(Set MSnapshotorders) {
+        this.MSnapshotorders = MSnapshotorders;
+    }
+   
 
-	public void setGoodsPrice(Float goodsPrice) {
-		this.goodsPrice = goodsPrice;
-	}
 
-	public Set getMSnapshotorders() {
-		return this.MSnapshotorders;
-	}
 
-	public void setMSnapshotorders(Set MSnapshotorders) {
-		this.MSnapshotorders = MSnapshotorders;
-	}
 
-	public Set getMFormatGoodses() {
-		return this.MFormatGoodses;
-	}
 
-	public void setMFormatGoodses(Set MFormatGoodses) {
-		this.MFormatGoodses = MFormatGoodses;
-	}
+
+
 
 }

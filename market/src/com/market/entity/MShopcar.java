@@ -1,103 +1,126 @@
 package com.market.entity;
 
+
+
 /**
  * MShopcar entity. @author MyEclipse Persistence Tools
  */
 
-public class MShopcar implements java.io.Serializable {
+public class MShopcar  implements java.io.Serializable {
 
-	// Fields
 
-	private Integer shopcarId;
-	private MGoods MGoods;
-	private MMember MMember;
-	private String creataDate;
-	private Integer goodsNum;
-	private Float goodsPrice;
-	private String shopcarRemark;
+    // Fields    
 
-	// Constructors
+     private Integer shopcarId;
+     private MGoods MGoods;
+     private MMember MMember;
+     private MGoodsformat MGoodsformat;
+     private String creataDate;
+     private Integer goodsNum;
+     private Float goodsPrice;
+     private String shopcarRemark;
 
-	/** default constructor */
-	public MShopcar() {
-	}
+
+    // Constructors
+
+    /** default constructor */
+    public MShopcar() {
+    }
 
 	/** minimal constructor */
-	public MShopcar(MGoods MGoods, MMember MMember, Integer goodsNum,
-			Float goodsPrice) {
-		this.MGoods = MGoods;
-		this.MMember = MMember;
-		this.goodsNum = goodsNum;
-		this.goodsPrice = goodsPrice;
-	}
+    public MShopcar(Integer shopcarId, MGoods MGoods, MMember MMember, Integer goodsNum, Float goodsPrice) {
+        this.shopcarId = shopcarId;
+        this.MGoods = MGoods;
+        this.MMember = MMember;
+        this.goodsNum = goodsNum;
+        this.goodsPrice = goodsPrice;
+    }
+    
+    /** full constructor */
+    public MShopcar(Integer shopcarId, MGoods MGoods, MMember MMember, MGoodsformat MGoodsformat, String creataDate, Integer goodsNum, Float goodsPrice, String shopcarRemark) {
+        this.shopcarId = shopcarId;
+        this.MGoods = MGoods;
+        this.MMember = MMember;
+        this.MGoodsformat = MGoodsformat;
+        this.creataDate = creataDate;
+        this.goodsNum = goodsNum;
+        this.goodsPrice = goodsPrice;
+        this.shopcarRemark = shopcarRemark;
+    }
 
-	/** full constructor */
-	public MShopcar(MGoods MGoods, MMember MMember, String creataDate,
-			Integer goodsNum, Float goodsPrice, String shopcarRemark) {
-		this.MGoods = MGoods;
-		this.MMember = MMember;
-		this.creataDate = creataDate;
-		this.goodsNum = goodsNum;
-		this.goodsPrice = goodsPrice;
-		this.shopcarRemark = shopcarRemark;
-	}
+   
+    // Property accessors
 
-	// Property accessors
+    public Integer getShopcarId() {
+        return this.shopcarId;
+    }
+    
+    public void setShopcarId(Integer shopcarId) {
+        this.shopcarId = shopcarId;
+    }
 
-	public Integer getShopcarId() {
-		return this.shopcarId;
-	}
+    public MGoods getMGoods() {
+        return this.MGoods;
+    }
+    
+    public void setMGoods(MGoods MGoods) {
+        this.MGoods = MGoods;
+    }
 
-	public void setShopcarId(Integer shopcarId) {
-		this.shopcarId = shopcarId;
-	}
+    public MMember getMMember() {
+        return this.MMember;
+    }
+    
+    public void setMMember(MMember MMember) {
+        this.MMember = MMember;
+    }
 
-	public MGoods getMGoods() {
-		return this.MGoods;
-	}
+    public MGoodsformat getMGoodsformat() {
+        return this.MGoodsformat;
+    }
+    
+    public void setMGoodsformat(MGoodsformat MGoodsformat) {
+        this.MGoodsformat = MGoodsformat;
+    }
 
-	public void setMGoods(MGoods MGoods) {
-		this.MGoods = MGoods;
-	}
+    public String getCreataDate() {
+        return this.creataDate;
+    }
+    
+    public void setCreataDate(String creataDate) {
+        this.creataDate = creataDate;
+    }
 
-	public MMember getMMember() {
-		return this.MMember;
-	}
+    public Integer getGoodsNum() {
+        return this.goodsNum;
+    }
+    
+    public void setGoodsNum(Integer goodsNum) {
+        this.goodsNum = goodsNum;
+    }
 
-	public void setMMember(MMember MMember) {
-		this.MMember = MMember;
-	}
+    public Float getGoodsPrice() {
+        return this.goodsPrice;
+    }
+    
+    public void setGoodsPrice(Float goodsPrice) {
+        this.goodsPrice = goodsPrice;
+    }
 
-	public String getCreataDate() {
-		return this.creataDate;
-	}
+    public String getShopcarRemark() {
+        return this.shopcarRemark;
+    }
+    
+    public void setShopcarRemark(String shopcarRemark) {
+        this.shopcarRemark = shopcarRemark;
+    }
+   
 
-	public void setCreataDate(String creataDate) {
-		this.creataDate = creataDate;
-	}
 
-	public Integer getGoodsNum() {
-		return this.goodsNum;
-	}
 
-	public void setGoodsNum(Integer goodsNum) {
-		this.goodsNum = goodsNum;
-	}
 
-	public Float getGoodsPrice() {
-		return this.goodsPrice;
-	}
 
-	public void setGoodsPrice(Float goodsPrice) {
-		this.goodsPrice = goodsPrice;
-	}
 
-	public String getShopcarRemark() {
-		return this.shopcarRemark;
-	}
 
-	public void setShopcarRemark(String shopcarRemark) {
-		this.shopcarRemark = shopcarRemark;
-	}
 
 }

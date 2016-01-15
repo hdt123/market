@@ -1,68 +1,83 @@
 package com.market.entity;
 
+
+
 /**
  * MImage entity. @author MyEclipse Persistence Tools
  */
 
-public class MImage implements java.io.Serializable {
+public class MImage  implements java.io.Serializable {
 
-	// Fields
 
-	private Integer imageId;
-	private MGoods MGoods;
-	private String imageSrc;
-	private Integer storeId;
+    // Fields    
 
-	// Constructors
+     private Integer imageId;
+     private MGoods MGoods;
+     private String imageSrc;
+     private Integer storeId;
 
-	/** default constructor */
-	public MImage() {
-	}
+
+    // Constructors
+
+    /** default constructor */
+    public MImage() {
+    }
 
 	/** minimal constructor */
-	public MImage(String imageSrc) {
-		this.imageSrc = imageSrc;
-	}
+    public MImage(Integer imageId, String imageSrc) {
+        this.imageId = imageId;
+        this.imageSrc = imageSrc;
+    }
+    
+    /** full constructor */
+    public MImage(Integer imageId, MGoods MGoods, String imageSrc, Integer storeId) {
+        this.imageId = imageId;
+        this.MGoods = MGoods;
+        this.imageSrc = imageSrc;
+        this.storeId = storeId;
+    }
 
-	/** full constructor */
-	public MImage(MGoods MGoods, String imageSrc, Integer storeId) {
-		this.MGoods = MGoods;
-		this.imageSrc = imageSrc;
-		this.storeId = storeId;
-	}
+   
+    // Property accessors
 
-	// Property accessors
+    public Integer getImageId() {
+        return this.imageId;
+    }
+    
+    public void setImageId(Integer imageId) {
+        this.imageId = imageId;
+    }
 
-	public Integer getImageId() {
-		return this.imageId;
-	}
+    public MGoods getMGoods() {
+        return this.MGoods;
+    }
+    
+    public void setMGoods(MGoods MGoods) {
+        this.MGoods = MGoods;
+    }
 
-	public void setImageId(Integer imageId) {
-		this.imageId = imageId;
-	}
+    public String getImageSrc() {
+        return this.imageSrc;
+    }
+    
+    public void setImageSrc(String imageSrc) {
+        this.imageSrc = imageSrc;
+    }
 
-	public MGoods getMGoods() {
-		return this.MGoods;
-	}
+    public Integer getStoreId() {
+        return this.storeId;
+    }
+    
+    public void setStoreId(Integer storeId) {
+        this.storeId = storeId;
+    }
+   
 
-	public void setMGoods(MGoods MGoods) {
-		this.MGoods = MGoods;
-	}
 
-	public String getImageSrc() {
-		return this.imageSrc;
-	}
 
-	public void setImageSrc(String imageSrc) {
-		this.imageSrc = imageSrc;
-	}
 
-	public Integer getStoreId() {
-		return this.storeId;
-	}
 
-	public void setStoreId(Integer storeId) {
-		this.storeId = storeId;
-	}
+
+
 
 }

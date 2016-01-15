@@ -27,17 +27,17 @@
 		<mapping resource="com/market/entity/MCollectionstore.hbm.xml" />
 		<mapping resource="com/market/entity/MGoodsformat.hbm.xml" />
 		<mapping resource="com/market/entity/MStore.hbm.xml" />
-		<mapping resource="com/market/entity/MPropertyGoods.hbm.xml" />
-		<mapping resource="com/market/entity/MGoodsproperty.hbm.xml" />
 		<mapping resource="com/market/entity/MAddress.hbm.xml" />
 		<mapping resource="com/market/entity/MLog.hbm.xml" />
 		<mapping resource="com/market/entity/MMember.hbm.xml" />
 		<mapping resource="com/market/entity/MShopcar.hbm.xml" />
 		<mapping resource="com/market/entity/MManager.hbm.xml" />
+		<mapping resource="com/market/entity/MGoodsProperty.hbm.xml" />
 		<mapping resource="com/market/entity/MGoods.hbm.xml" />
 		<mapping resource="com/market/entity/MSnapshotorder.hbm.xml" />
 		<mapping resource="com/market/entity/MProvince.hbm.xml" />
 		<mapping resource="com/market/entity/MFormatGoods.hbm.xml" />
+
 
 	</session-factory>
 

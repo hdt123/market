@@ -8,7 +8,7 @@
     <class name="com.market.entity.MProvince" table="m_province" catalog="market">
         <id name="id" type="java.lang.Integer">
             <column name="id" />
-            <generator class="identity" />
+            <generator class="assigned" />
         </id>
         <property name="code" type="java.lang.Integer">
             <column name="code" not-null="true" />

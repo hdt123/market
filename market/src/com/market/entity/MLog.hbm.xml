@@ -8,7 +8,7 @@
     <class name="com.market.entity.MLog" table="m_log" catalog="market">
         <id name="logId" type="java.lang.Integer">
             <column name="logId" />
-            <generator class="identity" />
+            <generator class="assigned" />
         </id>
         <many-to-one name="MManager" class="com.market.entity.MManager" fetch="select">
             <column name="managerId" not-null="true" />

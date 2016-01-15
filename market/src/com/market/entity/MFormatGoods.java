@@ -3,73 +3,84 @@ package com.market.entity;
 import java.util.HashSet;
 import java.util.Set;
 
+
 /**
- * 
- * @author Administrator
- *  商品规格名称
- *  意见商品对应一个规格名称
- *  一个规格名称对应多个规格
+ * MFormatGoods entity. @author MyEclipse Persistence Tools
  */
 
-public class MFormatGoods implements java.io.Serializable {
+public class MFormatGoods  implements java.io.Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private Integer id;
-	private MGoods MGoods;     //商品
-	private Set<MGoodsformat> MGoodsformats = new HashSet<MGoodsformat>();   //属性
-	private String formatName;    //规格名称
 
-	// Constructors
+    // Fields    
 
-	/** default constructor */
-	public MFormatGoods() {
-	}
+     private Integer id;
+     private MGoods MGoods;
+     private String formatName;
+     private Set MGoodsformats = new HashSet(0);
 
-	/** full constructor */
-	public MFormatGoods(MGoods MGoods, Set<MGoodsformat> MGoodsformats,
-			String formatName) {
-		this.MGoods = MGoods;
-		this.MGoodsformats = MGoodsformats;
-		this.formatName = formatName;
-	}
 
-	// Property accessors
+    // Constructors
 
-	public Integer getId() {
-		return this.id;
-	}
+    /** default constructor */
+    public MFormatGoods() {
+    }
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+	/** minimal constructor */
+    public MFormatGoods(Integer id, MGoods MGoods, String formatName) {
+        this.id = id;
+        this.MGoods = MGoods;
+        this.formatName = formatName;
+    }
+    
+    /** full constructor */
+    public MFormatGoods(Integer id, MGoods MGoods, String formatName, Set MGoodsformats) {
+        this.id = id;
+        this.MGoods = MGoods;
+        this.formatName = formatName;
+        this.MGoodsformats = MGoodsformats;
+    }
 
-	public MGoods getMGoods() {
-		return this.MGoods;
-	}
+   
+    // Property accessors
 
-	public void setMGoods(MGoods MGoods) {
-		this.MGoods = MGoods;
-	}
+    public Integer getId() {
+        return this.id;
+    }
+    
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	
+    public MGoods getMGoods() {
+        return this.MGoods;
+    }
+    
+    public void setMGoods(MGoods MGoods) {
+        this.MGoods = MGoods;
+    }
 
-	public Set<MGoodsformat> getMGoodsformats() {
-		return MGoodsformats;
-	}
+    public String getFormatName() {
+        return this.formatName;
+    }
+    
+    public void setFormatName(String formatName) {
+        this.formatName = formatName;
+    }
 
-	public void setMGoodsformats(Set<MGoodsformat> mGoodsformats) {
-		MGoodsformats = mGoodsformats;
-	}
+    public Set getMGoodsformats() {
+        return this.MGoodsformats;
+    }
+    
+    public void setMGoodsformats(Set MGoodsformats) {
+        this.MGoodsformats = MGoodsformats;
+    }
+   
 
-	public String getFormatName() {
-		return this.formatName;
-	}
 
-	public void setFormatName(String formatName) {
-		this.formatName = formatName;
-	}
+
+
+
+
+
 
 }

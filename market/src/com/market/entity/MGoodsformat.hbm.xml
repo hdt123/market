@@ -8,25 +8,28 @@
     <class name="com.market.entity.MGoodsformat" table="m_goodsformat" catalog="market">
         <id name="formatId" type="java.lang.Integer">
             <column name="formatId" />
-            <generator class="identity" />
+            <generator class="assigned" />
         </id>
+        <many-to-one name="MFormatGoods" class="com.market.entity.MFormatGoods" fetch="select">
+            <column name="parentFormatId" not-null="true" />
+        </many-to-one>
         <property name="formatName" type="java.lang.String">
             <column name="formatName" length="64" not-null="true" />
         </property>
         <property name="goodsPrice" type="java.lang.Float">
             <column name="goodsPrice" precision="12" scale="0" not-null="true" />
         </property>
+        <set name="MShopcars" inverse="true">
+            <key>
+                <column name="formatId" />
+            </key>
+            <one-to-many class="com.market.entity.MShopcar" />
+        </set>
         <set name="MSnapshotorders" inverse="true">
             <key>
                 <column name="formatId" />
             </key>
             <one-to-many class="com.market.entity.MSnapshotorder" />
-        </set>
-        <set name="MFormatGoodses" inverse="true">
-            <key>
-                <column name="formatId" not-null="true" />
-            </key>
-            <one-to-many class="com.market.entity.MFormatGoods" />
         </set>
     </class>
 </hibernate-mapping>
