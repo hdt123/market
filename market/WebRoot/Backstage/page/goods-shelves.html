@@ -25,6 +25,7 @@
 </head>
 <body>
 <div class="page_main">
+    <h3 class="header-dividing mar-top-0">商品上架</h3>
     <form class="form-horizontal" role="form">
         <div class="form-group">
             <label class="col-sm-2 control-label">商品名称</label>
@@ -110,52 +111,6 @@
 </body>
 <script src="../js/jquery-1.8.3.min.js"></script>
 <script src="../js/zui.min.js"></script>
+<script src="../js/shelves.js"></script>
 <script src="../js/dropzone.js"></script>
-<script>
-    $("#dropz").dropzone({
-        url: "index.php",
-        maxFiles: 1,
-        maxFilesize: 2,
-        addRemoveLinks: 'true',
-        acceptedFiles: ".jpg,.png,.git"
-    });
-    $('.introduce-body').on('click','.add-introduce', function () {
-        var $this = $(this);
-        var introduce = '<div class="introduce row mar-top-15">' +
-                            '<div class="col-sm-3">' +
-                                '<input class="form-control" type="text" placeholder="属性名" name="">' +
-                            '</div>' +
-                            '<div class="col-sm-3">' +
-                                '<input class="form-control" type="text" placeholder="属性" name="">' +
-                            '</div>' +
-                            '<div class="col-sm-3">' +
-                                ' <button type="button" class="btn delete-introduce btn-danger"><i class="icon icon-remove-sign"></i></button>' +
-                            '</div>' +
-                        '</div>';
-        $this.parents('.introduce-body').append(introduce);
-    });
-    $('.introduce-body').on('click','.delete-introduce', function () {
-        var $this = $(this);
-        $this.parents('.introduce').remove();
-    });
-    $('.specifications-body').on('click','.add-specifications', function () {
-        var specifications ='<div class="specifications row mar-top-15">' +
-                '<div class="col-sm-3 col-sm-offset-3">' +
-                '<input class="form-control" type="text" placeholder="规格" name="">'+
-                '</div>'+
-                '<div class="col-sm-3">'+
-                '<input class="form-control" type="text" placeholder="价格" name="">'+
-                '</div>'+
-                '<div class="col-sm-3">'+
-                '<button type="button" class="btn delete-specifications btn-danger"><i class="icon icon-remove-sign"></i></button>'+
-                '</div>'+
-                '</div>';
-        var $this = $(this);
-        $this.parents('.specifications-body').append(specifications);
-    });
-    $('.specifications-body').on('click','.delete-specifications', function () {
-        var $this = $(this);
-        $this.parents('.specifications').remove();
-    });
-</script>
 </html>
