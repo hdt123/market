@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../css/html.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <style>
+        html { font-size: 1px; }
+        .address-block {
+            display: -webkit-box;
+            padding: 18px 0 18px 15px;
+            border-bottom: 1px solid #d5d5d5;
+            font-size: 16rem;
+            background-color: #fff;
+            text-decoration: none;
+        }
+        .list {
+            -webkit-box-flex: 1;
+        }
+        .icon {
+            width: 20%;
+        }
+        .user {
+            display: -webkit-box;
+            -webkit-box-pack:justify;
+            margin-bottom: 10px;
+            color: #3d4245;
+            font-weight: bold;
+        }
+        .address {
+            font-size: 14rem;
+            color: #494e51;
+            text-align: justify;
+            line-height: 20px;
+        }
+        .icon {
+            display: -webkit-box;
+            text-align: center;
+            -webkit-box-pack:center;
+            -webkit-box-align:center;
+        }
+        .setBtn {
+            display: block;
+            text-decoration: none;
+            width: 40%;
+            padding: 10px 0;
+            color: #fff;
+            margin: 20px auto;
+            text-align: center;
+            font-size: 16rem;
+            border: none;
+            background-color: #04BE02;
+            border-radius:  10px;
+        }
+        .icon img { width: 50%; }
+        .active { background-color: #5e6b85; }
+        .active .user { color: #fff }
+        .active .address { color: #fff }
+    </style>
+</head>
+<body style="background-color: #f8f8f8">
+<div class="list-address">
+    <a class="address-block active" href="">
+        <div class="list title">
+            <div class="user">
+                <div>欧阳风云</div>
+                <div>15625413999</div>
+            </div>
+            <div class="address">广东省佛山市禅城区江湾一路19号河蟹小区东座306</div>
+        </div>
+        <div class="icon">
+            <img src="../../icon/active-address.png">
+        </div>
+    </a>
+    <a class="address-block" href="">
+        <div class="list title">
+            <div class="user">
+                <div>欧阳风云</div>
+                <div>15625413999</div>
+            </div>
+            <div class="address">广东省佛山市禅城区江湾一路19号河蟹小区东座306</div>
+        </div>
+        <div class="icon"></div>
+    </a>
+</div>
+<a class="setBtn" href="setAddress.html">添加新地址</a>
+</body>
+</html>

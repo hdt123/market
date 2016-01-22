@@ -1,7 +1,7 @@
 /**
  * Created by Fish on 2016/1/13.
  */
-var shelves = [];
+var shelves = {};
 shelves.domIntroduce = '<div class="introduce row mar-top-15">' +
                         '<div class="col-sm-3">' +
                         '<input class="form-control" type="text" placeholder="属性名" name="">' +
