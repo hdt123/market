@@ -31,10 +31,6 @@ html { font-size: 1px; }
     -webkit-box-pack:center;
     -webkit-box-align:center;
 }
-.icon img {
-    display: none;
-    width: 50%;
-}
 .list-management {
     display: block;
     padding: 10px 15px;
