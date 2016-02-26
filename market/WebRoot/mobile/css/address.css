@@ -8,6 +8,8 @@ html { font-size: 1px; }
     background-color: #fff;
     text-decoration: none;
 }
+.user {
+    font-size: 14rem; }
 .list {
     -webkit-box-flex: 1;
 }

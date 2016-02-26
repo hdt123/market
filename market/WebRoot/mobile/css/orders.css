@@ -1,0 +1,88 @@
+html { font-size: 1px }
+body {
+    background-color: #f0f2f5;
+    -webkit-overflow-scrolling: touch;
+}
+.header {
+    display: -webkit-box;
+    border-bottom: 1px solid #bfbfbf;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.header span {
+    -webkit-box-flex: 1;
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14rem;
+}
+.border {
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 4px;
+    background-color: #ff5000;
+    z-index: 10;
+    left: 0;
+}
+.animation {
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+.active {
+    color: red;
+}
+
+.goods {
+    background-color: #fff;
+    font-size: 12rem;
+    border-top: 1px solid #e0e0e0 ;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+}
+.goods > a {
+    display: block;
+    text-decoration: none;
+    color: #202020;
+}
+.time-top {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.buy-things {
+    padding: 12px 15px;
+    display: -webkit-box;
+    -webkit-box-align: center;
+}
+.buy-things img {
+    margin-right: 5px;
+}
+.buy-morn {
+    display: -webkit-box;
+
+    overflow-x: scroll;
+    white-space: nowrap;
+    overflow-scrolling: touch;
+}
+.buy-morn .img {
+    margin-right: 5px;
+}
+.img {
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    text-align: center;
+    max-width: 60px;
+    min-width: 60px;
+}
+.title {
+    -webkit-box-flex: 1;
+    line-height: 16px;
+}
+.price-foot {
+    display: block;
+    padding: 12px 15px;
+    border-top: 1px solid #e0e0e0 ;
+    text-decoration: none;
+    color: #202020;
+    text-align: right;
+}

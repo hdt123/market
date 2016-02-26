@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../css/html.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/orders.css">
+</head>
+<body>
+    <div class="header">
+        <span>全部订单</span>
+        <span>未支付</span>
+        <span>待发货</span>
+        <span>发货中</span>
+        <span>已完成</span>
+        <div id="aaa" class="border animation"></div>
+    </div>
+    <div class="content">
+        <div class="goods">
+            <a href="">
+                <div class="time-top">2016年2月24日10:05:57</div>
+                <div class="buy-things">
+                    <img class="img" src="../../img/test.png">
+                    <div class="title">
+                        商品名称商品名称商品名称商品名称商品名称商品名称商品名称
+                    </div>
+                </div>
+            </a>
+            <div class="price-foot">
+                实付款：￥20.00
+            </div>
+        </div>
+        <div class="goods">
+            <a href="">
+                <div class="time-top">2016年2月24日10:05:57</div>
+                <div class="buy-things buy-morn">
+                    <img class="img" src="../../img/test.png">
+                    <img class="img" src="../../img/test.png">
+                    <img class="img" src="../../img/test.png">
+                    <img class="img" src="../../img/test.png">
+                    <img class="img" src="../../img/test.png">
+                    <img class="img" src="../../img/test.png">
+                </div>
+            </a>
+            <div class="price-foot">
+                实付款：￥20.00
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../js/jquery-1.8.3.min.js"></script>
+<script>
+    $(function () {
+        $('.border').css('top',$('.header').height()-4);
+    });
+    $('.header span').click(function () {
+        var aaa=document.getElementById('aaa');
+        aaa.style.webkitTransform = 'translateX(' + this.offsetLeft + 'px'+ ')';
+        aaa.style.transform = 'translateX(' + this.offsetLeft + 'px'+ ')';
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+</script>
+</html>
