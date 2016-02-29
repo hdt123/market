@@ -9,17 +9,18 @@
 <body>
     <div class="page_main">
         <h3 class="header-dividing mar-top-0">分类管理</h3>
-        <form class="form-horizontal btnBox" role="form">
+        <form class="form-horizontal" role="form">
             <div class="form-group type_body">
-                <div class="col-sm-4">
-                    <input class='form-control' type='text' placeholder="请输入类别名称，如家居、电子" name="">
+                <label class="col-md-1 control-label order"></label>
+                <div class="col-md-2">
+                    <input class="form-control" type="text" name="">
                 </div>
             </div>
-            <div class="form-group text-center">
-                <div class="col-sm-2">
+            <div class="form-group text-center add-node">
+                <div class="col-sm-offset-1 col-sm-1">
                     <button type="button" class="btn btn-block btn-primary type_add">新增类别</button>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-1">
                     <button type="submit" class="btn btn-block btn-success">提交</button>
                 </div>
             </div>
@@ -28,8 +29,9 @@
 </body>
 <script src="../js/jquery-1.8.3.min.js"></script>
 <script>
-    var type = '<div class="form-group typeBox">' +
-                    '<div class="col-sm-4">' +
+    var type = ' <div class="form-group typeBox">' +
+                    '<label class="col-md-1 control-label order"></label>'+
+                    '<div class="col-sm-2">' +
                         '<input class="form-control" type="text" name="">' +
                     '</div>' +
                     '<div class="col-sm-2">' +
@@ -37,10 +39,20 @@
                     '</div>'+
                 '</div>';
     $('.type_add').click(function () {
-        $('.type_body').after(type);
+        $('.add-node').before(type);
+        order();
     });
-    $('.btnBox').on('click','.delete', function () {
+    $('.page_main').on('click','.delete', function () {
         $(this).parents('.typeBox').remove();
-    })
+        order();
+    });
+    $(function () {
+        order();
+    });
+    function order(){
+        for(var i = 0; i < $('.order').length; i++){
+            $('.order').eq(i).html(i+1);
+        }
+    }
 </script>
 </html>
