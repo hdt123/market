@@ -9,17 +9,21 @@ content.goods = $('.goods');
 content.goods.on('click', function (e) {
     var button = e.target.className;
     var input = $(this).find('input[type = text]');
+    var money = $(this).find('.subtotal span');
+    var price = $(this).find('.unit-price span').html();
     var val = parseInt(input.val());
     switch (button) {
         case 'reduce':
             if(val > 1){
                 input.val(val -  1);
+                getTotal();
             } else {
                 $(this).disabled = true;
             }
             break;
         case 'add':
             input.val(val + 1);
+            getTotal();
             break;
         case 'delete':
             var conf = confirm('È·¶¨ÒªÉ¾³ýÂð£¿');
@@ -30,7 +34,6 @@ content.goods.on('click', function (e) {
             break;
     }
 });
-
 content.content.on('click','.check',function () {
     if($(this).find($("input[class='checked']")).is(':checked')){
         $(this).find('.checked').attr('checked',false);
@@ -40,7 +43,22 @@ content.content.on('click','.check',function () {
         $(this).find('.checked-icon').addClass('checked-active');
     }
     check();
+    getTotal();
 });
+function getTotal(){
+    var all_money = 0;
+    for(var i = 0; i < content.goods.length; i++){
+        if(content.goods.eq(i).find($("input[class='checked']")).is(':checked')){
+            all_money += parseFloat(content.goods.eq(i).find('.unit-price span').html());
+            $('.total-price span').html(all_money.toFixed(2));
+        } else {
+            $('.total-price span').html('0');
+        }
+    }
+    if(content.goods.length == 0){
+        $('.total-price span').html('0');
+    }
+}
 function check() {
     if($('input[class="checked"]:checked').length == $('.checked').length){
         $('.all-checked').attr('checked',true);
@@ -67,4 +85,5 @@ $('.all-check').on('click', function () {
             $(this).nextAll('.checked-icon').addClass('checked-active');
         })
     }
+    getTotal();
 });
