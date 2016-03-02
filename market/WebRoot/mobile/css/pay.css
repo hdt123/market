@@ -1,0 +1,64 @@
+.user { -webkit-box-pack: start; }
+.user div { margin-right: 20px; }
+.address { margin-right: 20px }
+.choose-address {
+    margin: 10px 0;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    border-top: 1px solid #d5d5d5;
+    border-bottom: 1px solid #d5d5d5;
+    background-color: #fff;
+    font-size: 14rem;
+}
+.check-table { display: -webkit-box }
+.check-table label {
+    display: block;
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+    -webkit-box-align: center;
+}
+.check-table input { display: none }
+.check-table i {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("../icon/checked.png") no-repeat 0 0;
+    margin-right: 5px;
+}
+.checked-active i { background-position: -22px 0; }
+.price-box {
+    display: -webkit-box;
+    -webkit-box-pack: justify;
+}
+.price-box:first-child { margin-bottom: 5px }
+.price-box span { display: block; }
+.price-box span:last-child { color: #c7000f; }
+.foot-flex {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: rgba(0,0,0,0.8);
+    color: #f0f0f0;
+    display: -webkit-box;
+}
+.total-price {
+    -webkit-box-flex: 1;
+    line-height: 50px;
+    font-size: 16rem;
+    text-align: center;
+}
+.settlement {
+    display: block;
+    width: 40%;
+    text-align: center;
+    color: #f0f0f0;
+    text-decoration: none;
+    line-height: 50px;
+    font-size: 16rem;
+    background-color: #04BE02;
+}
+.mar-btm-75 { margin-bottom: 60px }

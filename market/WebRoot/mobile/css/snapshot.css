@@ -1,0 +1,46 @@
+.user div { margin-right: 20px; }
+.address { margin-right: 20px }
+.box-justify {
+    display: -webkit-box;
+    -webkit-box-pack: justify;
+}
+.color-ccc div:first-child { color: #7e7e7e }
+.box-list {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.box-list:first-child { padding-top: 0 }
+.box-list:last-child {
+    padding-bottom: 0;
+    border: none;
+}
+.goods img {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.goods .title {
+    -webkit-box-flex: 1;
+    margin-left: 10px;
+}
+.num div,
+.goods p {
+    line-height: 19px;
+}
+.goods {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.goods:first-child { padding-top: 0 }
+.goods:last-child {
+    padding-bottom: 0;
+    border: none;
+}
+.money {
+    font-size: 18rem;
+    border-top: 1px solid #999;
+    padding-top: 8px;
+}
+.money div:last-child { color: #b50000 }

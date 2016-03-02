@@ -9,8 +9,10 @@
     -webkit-tap-highlight-color: rgba(255,255,255,0);
     -webkit-text-size-adjust: none;
 }
+html { font-size: 1px; }
 body {
     font-family: "Microsoft YaHei", "微软雅黑", "黑体",serif;
+    background: #f0f2f5;
 }
 .clear:after {
     display: block;
@@ -20,7 +22,14 @@ body {
 .orange{
     color: #e14b1d;
 }
-
+.location {
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-top: 1px solid #d5d5d5;
+    background-color: #fff;
+    border-bottom: 1px solid #d5d5d5;
+    font-size: 14rem;
+}
 
 hr {
     margin: 0 10px;
